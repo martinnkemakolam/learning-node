@@ -8,5 +8,5 @@ app.get('/', (req, res, next)=>{
     res.send({some: 'test'})  
 })
 app.listen(3010, ()=>{
-    console.log('listening on port 300');
+    console.log('listening on port 3010');
 })
