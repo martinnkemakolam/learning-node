@@ -1,5 +1,5 @@
 // let assert = require('assert')
-let {assert} = require('chai')
+let {assert, expect} = require('chai')
 let testArr
 let testStr
 // before called before a test startes
@@ -17,12 +17,14 @@ describe('first test', () => {
     // it, what should happen
     it('should return an array', () => {
         //assert, used for the testing
-        assert(Array.isArray(testStr))
+        // assert(Array.isArray(testStr))
+        expect(Array.isArray(testStr)).to.equal(true)
     })
     it('should return the same array', () => {
         assert.equal(testArr.length, testStr.length, 'arrays have equal length')
         testArr.forEach((ele, id)=>{
-            assert(ele, testStr[id], 'values are equal')
+            // assert(ele, testStr[id], 'values are equal')
+            expect(ele).to.equal(testStr[id])
         })
     })
 })
